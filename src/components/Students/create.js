@@ -1,14 +1,10 @@
-// CreateStudent Component for add new student
-
-// Import Modules
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 import Column from "./column";
 
 // CreateStudent Component
 const Create = () => {
-    const [formValues, setFormValues] =
-        useState({ name: '', email: '', rollno: '' })
+    const [formValues, setFormValues] = useState({ name: '', email: '', rollno: '' })
     // onSubmit handler
     const onSubmit = studentObject => {
         axios.post(

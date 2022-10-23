@@ -1,7 +1,7 @@
 import React from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { FormGroup, FormControl, Button } from "react-bootstrap";
+import { FormGroup, Button } from "react-bootstrap";
 
 const Column = (props) => {
     const validationSchema = Yup.object().shape({
@@ -14,7 +14,6 @@ const Column = (props) => {
             .integer("Invalid roll number")
             .required("Required"),
     });
-    console.log(props);
     return (
         <div className="form-wrapper">
             <Formik {...props} validationSchema={validationSchema}>
